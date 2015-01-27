@@ -1540,7 +1540,6 @@ pdf_document_links_get_links (EvDocumentLinks *document_links,
 
     char * page_text = poppler_page_get_text (poppler_page);
 
-    // Source : https://mathiasbynens.be/demo/url-regex @imme_emosol
     const char * str_regex = "(https?|ftp)://(-\\.)?([^\\s/?\\.#-]+\\.?)+(/[^\\s]*)?";
     regex_t preg;
     if (regcomp (&preg, str_regex, REG_NOSUB | REG_EXTENDED) != 0) {
